@@ -1,0 +1,35 @@
+{% extends 'home.html'%}
+{% load static %}
+
+
+{% block content%}
+
+
+
+<h2 class="text-center">Login to check health status</h2>
+<div class="container"  style= "background-image: url('{% static 'spd.jpg'%}');">
+
+    <form class="container text-center mt-5"  action="{% url 'login' %}" method="post" >
+        {% csrf_token %}
+        <div class="form-group form-group-sm"">
+            <h6>.</h6>
+            <h6>.</h6>
+            <h6>.</h6>
+            <h6>.</h6>
+            <h6>.</h6>
+            <h6>.</h6>
+            <h6>.</h6>
+            <h6>.</h6>
+            <h6>.</h6>
+            <input type="text" class="form-control m-4" name="username" placeholder='enter product id (Given on product)'equired autofocus autocomplete="off">
+            <input type="password" class="form-control m-4" name="password" placeholder="enter product key (Given on product)" required autofocus autocomplete="off">
+            <input type="submit" class="btn btn-primary mb-5" value="Login">
+            <h6>.</h6>
+            
+
+        </div>
+    </form>
+</div>
+
+
+{%endblock%}
